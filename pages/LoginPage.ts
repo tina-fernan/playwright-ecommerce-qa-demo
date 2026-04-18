@@ -29,10 +29,16 @@ export class LoginPage {
   }
 
   async loginWithValidCredentials() {
-    await this.login(
-      process.env.TEST_USERNAME || 'mor_2314',
-      process.env.TEST_PASSWORD || '83r5^_',
+    const username = process.env.TEST_USERNAME;
+  const password = process.env.TEST_PASSWORD;
+
+  if (!username || !password) {
+    throw new Error(
+      'Missing credentials — set TEST_USERNAME and TEST_PASSWORD in your .env file'
     );
+  }
+
+  await this.login(username, password);
   }
 
   async logout() {

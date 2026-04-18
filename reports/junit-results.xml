@@ -1,40 +1,40 @@
-<testsuites id="" name="" tests="17" failures="0" skipped="0" errors="0" time="49.422104">
-<testsuite name="ui\login.spec.ts" timestamp="2026-04-18T19:56:57.285Z" hostname="chromium" tests="8" failures="0" skipped="0" time="69.316" errors="0">
-<testcase name="TC-AUTH | Login UI › TC-UI-001 | Valid login redirects to products page" classname="ui\login.spec.ts" time="12.276">
+<testsuites id="" name="" tests="17" failures="0" skipped="0" errors="0" time="32.678272">
+<testsuite name="ui\login.spec.ts" timestamp="2026-04-18T20:12:13.367Z" hostname="chromium" tests="8" failures="0" skipped="0" time="43.689" errors="0">
+<testcase name="TC-AUTH | Login UI › TC-UI-001 | Valid login redirects to products page" classname="ui\login.spec.ts" time="10.405">
 </testcase>
-<testcase name="TC-AUTH | Login UI › TC-UI-002 | Welcome message shows correct username" classname="ui\login.spec.ts" time="12.991">
+<testcase name="TC-AUTH | Login UI › TC-UI-002 | Welcome message shows correct username" classname="ui\login.spec.ts" time="9.184">
 </testcase>
-<testcase name="TC-AUTH | Login UI › TC-UI-003 | Login page has correct fields" classname="ui\login.spec.ts" time="7.986">
+<testcase name="TC-AUTH | Login UI › TC-UI-003 | Login page has correct fields" classname="ui\login.spec.ts" time="2.562">
 </testcase>
-<testcase name="TC-AUTH | Login UI › TC-UI-004 | Password field masks input" classname="ui\login.spec.ts" time="11.365">
+<testcase name="TC-AUTH | Login UI › TC-UI-004 | Password field masks input" classname="ui\login.spec.ts" time="2.275">
 </testcase>
-<testcase name="TC-AUTH | Login UI › TC-UI-005 | Invalid credentials shows error message" classname="ui\login.spec.ts" time="6.114">
+<testcase name="TC-AUTH | Login UI › TC-UI-005 | Invalid credentials shows error message" classname="ui\login.spec.ts" time="6.335">
 </testcase>
-<testcase name="TC-AUTH | Login UI › TC-UI-006 | Empty username shows error" classname="ui\login.spec.ts" time="6.472">
+<testcase name="TC-AUTH | Login UI › TC-UI-006 | Empty username shows error" classname="ui\login.spec.ts" time="5.719">
 </testcase>
-<testcase name="TC-AUTH | Login UI › TC-UI-007 | Empty password shows error" classname="ui\login.spec.ts" time="6.783">
+<testcase name="TC-AUTH | Login UI › TC-UI-007 | Empty password shows error" classname="ui\login.spec.ts" time="2.987">
 </testcase>
-<testcase name="TC-AUTH | Login UI › TC-UI-008 | Logout returns to login page" classname="ui\login.spec.ts" time="5.329">
+<testcase name="TC-AUTH | Login UI › TC-UI-008 | Logout returns to login page" classname="ui\login.spec.ts" time="4.222">
 </testcase>
 </testsuite>
-<testsuite name="ui\products.spec.ts" timestamp="2026-04-18T19:56:57.285Z" hostname="chromium" tests="9" failures="0" skipped="0" time="63.586" errors="0">
-<testcase name="TC-PROD | Products UI › TC-UI-009 | Products grid is visible after login" classname="ui\products.spec.ts" time="8.552">
+<testsuite name="ui\products.spec.ts" timestamp="2026-04-18T20:12:13.367Z" hostname="chromium" tests="9" failures="0" skipped="0" time="53.519" errors="0">
+<testcase name="TC-PROD | Products UI › TC-UI-009 | Products grid is visible after login" classname="ui\products.spec.ts" time="9.001">
 </testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-010 | Products page shows multiple products" classname="ui\products.spec.ts" time="8.343">
+<testcase name="TC-PROD | Products UI › TC-UI-010 | Products page shows multiple products" classname="ui\products.spec.ts" time="4.29">
 </testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-011 | Category filter is visible" classname="ui\products.spec.ts" time="8.981">
+<testcase name="TC-PROD | Products UI › TC-UI-011 | Category filter is visible" classname="ui\products.spec.ts" time="6.472">
 </testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-012 | Filter by electronics shows correct products" classname="ui\products.spec.ts" time="6.456">
+<testcase name="TC-PROD | Products UI › TC-UI-012 | Filter by electronics shows correct products" classname="ui\products.spec.ts" time="5.755">
 </testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-013 | Filter by jewelery shows correct products" classname="ui\products.spec.ts" time="7.318">
+<testcase name="TC-PROD | Products UI › TC-UI-013 | Filter by jewelery shows correct products" classname="ui\products.spec.ts" time="4.747">
 </testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-014 | Cart count starts at zero" classname="ui\products.spec.ts" time="8.363">
+<testcase name="TC-PROD | Products UI › TC-UI-014 | Cart count starts at zero" classname="ui\products.spec.ts" time="6.275">
 </testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-015 | Adding product increases cart count" classname="ui\products.spec.ts" time="5.521">
+<testcase name="TC-PROD | Products UI › TC-UI-015 | Adding product increases cart count" classname="ui\products.spec.ts" time="6.08">
 </testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-016 | Adding multiple products updates cart count" classname="ui\products.spec.ts" time="5.55">
+<testcase name="TC-PROD | Products UI › TC-UI-016 | Adding multiple products updates cart count" classname="ui\products.spec.ts" time="6.203">
 </testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-017 | Logout from products page works" classname="ui\products.spec.ts" time="4.502">
+<testcase name="TC-PROD | Products UI › TC-UI-017 | Logout from products page works" classname="ui\products.spec.ts" time="4.696">
 </testcase>
 </testsuite>
 </testsuites>
