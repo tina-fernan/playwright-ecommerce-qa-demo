@@ -1,0 +1,30 @@
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+
+# Playwright auto-generated outputs
+playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+test-results/
+allure-results/
+allure-report/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+
+
+
+
