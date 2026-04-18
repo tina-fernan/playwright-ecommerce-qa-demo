@@ -3,13 +3,23 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+  "serve": "http-server . -p 3000 -c-1",
+  "test": "playwright test",
+  "test:ui": "playwright test tests/ui/",
+  "test:api": "playwright test tests/api/ --project=API",
+  "test:all": "playwright test",
+  "test:headed": "playwright test tests/ui/ --headed",
+  "test:report": "playwright show-report",
+  "test:debug": "playwright test --debug"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.59.1",
-    "@types/node": "^25.6.0"
+    "@types/node": "^25.6.0",
+    "http-server": "^14.1.1"
   },
   "dependencies": {
     "dotenv": "^17.4.2"
