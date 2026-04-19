@@ -1,8 +1,15 @@
 import { test, expect } from '@playwright/test';
+import { allure } from 'allure-playwright';
 
 const BASE_URL = 'https://fakestoreapi.com';
 
 test.describe('TC-CART | Carts API', () => {
+
+  test.beforeEach(async () => {
+    allure.epic('E-commerce API');
+    allure.feature('Carts');
+    allure.owner('Tina Fernandes');
+  });
 
   test('TC-CART-001 | Get all carts returns 200 and array', async ({ request }) => {
     const response = await request.get(`${BASE_URL}/carts`);
@@ -21,7 +28,7 @@ test.describe('TC-CART | Carts API', () => {
 
     const cart = await response.json();
 
-    // ── Schema validation ──────────────────────────────────
+    // Schema validation
     expect(cart).toHaveProperty('id');
     expect(cart).toHaveProperty('userId');
     expect(cart).toHaveProperty('date');

@@ -1,8 +1,15 @@
 import { test, expect } from '@playwright/test';
+import { allure } from 'allure-playwright';
 
 const BASE_URL = 'https://fakestoreapi.com';
 
 test.describe('TC-USER | Users API', () => {
+
+  test.beforeEach(async () => {
+    allure.epic('E-commerce API');
+    allure.feature('Users'); 
+    allure.owner('Tina Fernandes');
+  });
 
   test('TC-USER-001 | Get all users returns 200 and array', async ({ request }) => {
     const response = await request.get(`${BASE_URL}/users`);

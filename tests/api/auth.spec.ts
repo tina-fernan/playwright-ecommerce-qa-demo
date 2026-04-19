@@ -1,10 +1,20 @@
 import { test, expect } from '@playwright/test';
+import { allure } from 'allure-playwright';
 
 const BASE_URL = 'https://fakestoreapi.com';
 
 test.describe('TC-AUTH | Authentication API', () => {
 
+  test.beforeEach(async () => {
+    allure.epic('E-commerce API');
+    allure.feature('Authentication');
+    allure.owner('Tina Fernandes');
+  });
+
   test('TC-AUTH-001 | Login with valid credentials returns token', async ({ request }) => {
+    allure.severity('critical');
+    allure.description('Verify POST /auth/login returns 200 and a valid token string');
+
     const response = await request.post(`${BASE_URL}/auth/login`, {
       data: {
         username: 'mor_2314',

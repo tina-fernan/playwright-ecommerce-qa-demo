@@ -1,122 +1,68 @@
-<testsuites id="" name="" tests="52" failures="0" skipped="0" errors="0" time="37.83600500000001">
-<testsuite name="api\auth.spec.ts" timestamp="2026-04-19T08:56:38.146Z" hostname="chromium" tests="5" failures="0" skipped="0" time="3.162" errors="0">
-<testcase name="TC-AUTH | Authentication API › TC-AUTH-001 | Login with valid credentials returns token" classname="api\auth.spec.ts" time="0.81">
+<testsuites id="" name="" tests="29" failures="0" skipped="0" errors="0" time="10.874066">
+<testsuite name="api\auth.spec.ts" timestamp="2026-04-19T09:57:40.159Z" hostname="API" tests="5" failures="0" skipped="0" time="2.632" errors="0">
+<testcase name="TC-AUTH | Authentication API › TC-AUTH-001 | Login with valid credentials returns token" classname="api\auth.spec.ts" time="0.709">
 </testcase>
-<testcase name="TC-AUTH | Authentication API › TC-AUTH-002 | Login with invalid password returns error" classname="api\auth.spec.ts" time="0.96">
+<testcase name="TC-AUTH | Authentication API › TC-AUTH-002 | Login with invalid password returns error" classname="api\auth.spec.ts" time="0.553">
 </testcase>
-<testcase name="TC-AUTH | Authentication API › TC-AUTH-003 | Login with empty username returns error" classname="api\auth.spec.ts" time="0.571">
+<testcase name="TC-AUTH | Authentication API › TC-AUTH-003 | Login with empty username returns error" classname="api\auth.spec.ts" time="0.536">
 </testcase>
-<testcase name="TC-AUTH | Authentication API › TC-AUTH-004 | Login with empty password returns error" classname="api\auth.spec.ts" time="0.566">
+<testcase name="TC-AUTH | Authentication API › TC-AUTH-004 | Login with empty password returns error" classname="api\auth.spec.ts" time="0.482">
 </testcase>
-<testcase name="TC-AUTH | Authentication API › TC-AUTH-005 | Token is a valid string" classname="api\auth.spec.ts" time="0.255">
-</testcase>
-</testsuite>
-<testsuite name="api\carts.spec.ts" timestamp="2026-04-19T08:56:38.146Z" hostname="chromium" tests="6" failures="0" skipped="0" time="1.334" errors="0">
-<testcase name="TC-CART | Carts API › TC-CART-001 | Get all carts returns 200 and array" classname="api\carts.spec.ts" time="0.326">
-</testcase>
-<testcase name="TC-CART | Carts API › TC-CART-002 | Get single cart returns correct schema" classname="api\carts.spec.ts" time="0.259">
-</testcase>
-<testcase name="TC-CART | Carts API › TC-CART-003 | Cart products have productId and quantity" classname="api\carts.spec.ts" time="0.299">
-</testcase>
-<testcase name="TC-CART | Carts API › TC-CART-004 | Create a cart returns new cart with id" classname="api\carts.spec.ts" time="0.09">
-</testcase>
-<testcase name="TC-CART | Carts API › TC-CART-005 | Update a cart returns updated data" classname="api\carts.spec.ts" time="0.111">
-</testcase>
-<testcase name="TC-CART | Carts API › TC-CART-006 | Delete a cart returns deleted cart" classname="api\carts.spec.ts" time="0.249">
+<testcase name="TC-AUTH | Authentication API › TC-AUTH-005 | Token is a valid string" classname="api\auth.spec.ts" time="0.352">
 </testcase>
 </testsuite>
-<testsuite name="api\products.spec.ts" timestamp="2026-04-19T08:56:38.146Z" hostname="chromium" tests="11" failures="0" skipped="0" time="1.463" errors="0">
-<testcase name="TC-PROD | Products API › TC-PROD-001 | Get all products returns 200 and array" classname="api\products.spec.ts" time="0.161">
+<testsuite name="api\carts.spec.ts" timestamp="2026-04-19T09:57:40.159Z" hostname="API" tests="6" failures="0" skipped="0" time="1.37" errors="0">
+<testcase name="TC-CART | Carts API › TC-CART-001 | Get all carts returns 200 and array" classname="api\carts.spec.ts" time="0.382">
 </testcase>
-<testcase name="TC-PROD | Products API › TC-PROD-002 | Get single product returns correct data" classname="api\products.spec.ts" time="0.254">
+<testcase name="TC-CART | Carts API › TC-CART-002 | Get single cart returns correct schema" classname="api\carts.spec.ts" time="0.276">
 </testcase>
-<testcase name="TC-PROD | Products API › TC-PROD-003 | Product schema has all required fields" classname="api\products.spec.ts" time="0.123">
+<testcase name="TC-CART | Carts API › TC-CART-003 | Cart products have productId and quantity" classname="api\carts.spec.ts" time="0.263">
 </testcase>
-<testcase name="TC-PROD | Products API › TC-PROD-004 | Price is a number not a string" classname="api\products.spec.ts" time="0.115">
+<testcase name="TC-CART | Carts API › TC-CART-004 | Create a cart returns new cart with id" classname="api\carts.spec.ts" time="0.104">
 </testcase>
-<testcase name="TC-PROD | Products API › TC-PROD-005 | Get products by category returns correct items" classname="api\products.spec.ts" time="0.154">
+<testcase name="TC-CART | Carts API › TC-CART-005 | Update a cart returns updated data" classname="api\carts.spec.ts" time="0.119">
 </testcase>
-<testcase name="TC-PROD | Products API › TC-PROD-006 | Get all categories returns array of strings" classname="api\products.spec.ts" time="0.122">
-</testcase>
-<testcase name="TC-PROD | Products API › TC-PROD-007 | Limit query returns correct number of products" classname="api\products.spec.ts" time="0.119">
-</testcase>
-<testcase name="TC-PROD | Products API › TC-PROD-008 | Response time is under 3 seconds" classname="api\products.spec.ts" time="0.091">
-</testcase>
-<testcase name="TC-PROD | Products API › TC-PROD-009 | Create a product returns new product with id" classname="api\products.spec.ts" time="0.117">
-</testcase>
-<testcase name="TC-PROD | Products API › TC-PROD-010 | Update a product returns updated data" classname="api\products.spec.ts" time="0.1">
-</testcase>
-<testcase name="TC-PROD | Products API › TC-PROD-011 | Delete a product returns deleted product" classname="api\products.spec.ts" time="0.107">
+<testcase name="TC-CART | Carts API › TC-CART-006 | Delete a cart returns deleted cart" classname="api\carts.spec.ts" time="0.226">
 </testcase>
 </testsuite>
-<testsuite name="api\users.spec.ts" timestamp="2026-04-19T08:56:38.146Z" hostname="chromium" tests="7" failures="0" skipped="0" time="1.465" errors="0">
-<testcase name="TC-USER | Users API › TC-USER-001 | Get all users returns 200 and array" classname="api\users.spec.ts" time="0.225">
+<testsuite name="api\products.spec.ts" timestamp="2026-04-19T09:57:40.159Z" hostname="API" tests="11" failures="0" skipped="0" time="1.547" errors="0">
+<testcase name="TC-PROD | Products API › TC-PROD-001 | Get all products returns 200 and array" classname="api\products.spec.ts" time="0.136">
 </testcase>
-<testcase name="TC-USER | Users API › TC-USER-002 | Get single user returns correct data" classname="api\users.spec.ts" time="0.2">
+<testcase name="TC-PROD | Products API › TC-PROD-002 | Get single product returns correct data" classname="api\products.spec.ts" time="0.113">
 </testcase>
-<testcase name="TC-USER | Users API › TC-USER-003 | User schema has all required fields" classname="api\users.spec.ts" time="0.224">
+<testcase name="TC-PROD | Products API › TC-PROD-003 | Product schema has all required fields" classname="api\products.spec.ts" time="0.134">
 </testcase>
-<testcase name="TC-USER | Users API › TC-USER-004 | User name has firstname and lastname" classname="api\users.spec.ts" time="0.212">
+<testcase name="TC-PROD | Products API › TC-PROD-004 | Price is a number not a string" classname="api\products.spec.ts" time="0.108">
 </testcase>
-<testcase name="TC-USER | Users API › TC-USER-005 | User address has correct structure" classname="api\users.spec.ts" time="0.233">
+<testcase name="TC-PROD | Products API › TC-PROD-005 | Get products by category returns correct items" classname="api\products.spec.ts" time="0.174">
 </testcase>
-<testcase name="TC-USER | Users API › TC-USER-006 | User email is a valid format" classname="api\users.spec.ts" time="0.183">
+<testcase name="TC-PROD | Products API › TC-PROD-006 | Get all categories returns array of strings" classname="api\products.spec.ts" time="0.158">
 </testcase>
-<testcase name="TC-USER | Users API › TC-USER-007 | Get invalid user returns empty or error" classname="api\users.spec.ts" time="0.188">
+<testcase name="TC-PROD | Products API › TC-PROD-007 | Limit query returns correct number of products" classname="api\products.spec.ts" time="0.161">
 </testcase>
-</testsuite>
-<testsuite name="example.spec.ts" timestamp="2026-04-19T08:56:38.146Z" hostname="chromium" tests="2" failures="0" skipped="0" time="16.11" errors="0">
-<testcase name="has title" classname="example.spec.ts" time="7.963">
+<testcase name="TC-PROD | Products API › TC-PROD-008 | Response time is under 3 seconds" classname="api\products.spec.ts" time="0.123">
 </testcase>
-<testcase name="get started link" classname="example.spec.ts" time="8.147">
+<testcase name="TC-PROD | Products API › TC-PROD-009 | Create a product returns new product with id" classname="api\products.spec.ts" time="0.141">
 </testcase>
-</testsuite>
-<testsuite name="ui\login.spec.ts" timestamp="2026-04-19T08:56:38.146Z" hostname="chromium" tests="8" failures="0" skipped="0" time="31.453" errors="0">
-<testcase name="TC-AUTH | Login UI › TC-UI-001 | Valid login redirects to products page" classname="ui\login.spec.ts" time="7.05">
+<testcase name="TC-PROD | Products API › TC-PROD-010 | Update a product returns updated data" classname="api\products.spec.ts" time="0.159">
 </testcase>
-<testcase name="TC-AUTH | Login UI › TC-UI-002 | Welcome message shows correct username" classname="ui\login.spec.ts" time="8.683">
-</testcase>
-<testcase name="TC-AUTH | Login UI › TC-UI-003 | Login page has correct fields" classname="ui\login.spec.ts" time="1.281">
-</testcase>
-<testcase name="TC-AUTH | Login UI › TC-UI-004 | Password field masks input" classname="ui\login.spec.ts" time="2.693">
-</testcase>
-<testcase name="TC-AUTH | Login UI › TC-UI-005 | Invalid credentials shows error message" classname="ui\login.spec.ts" time="2.797">
-</testcase>
-<testcase name="TC-AUTH | Login UI › TC-UI-006 | Empty username shows error" classname="ui\login.spec.ts" time="2.744">
-</testcase>
-<testcase name="TC-AUTH | Login UI › TC-UI-007 | Empty password shows error" classname="ui\login.spec.ts" time="2.612">
-</testcase>
-<testcase name="TC-AUTH | Login UI › TC-UI-008 | Logout returns to login page" classname="ui\login.spec.ts" time="3.593">
+<testcase name="TC-PROD | Products API › TC-PROD-011 | Delete a product returns deleted product" classname="api\products.spec.ts" time="0.14">
 </testcase>
 </testsuite>
-<testsuite name="ui\products.fixture.spec.ts" timestamp="2026-04-19T08:56:38.146Z" hostname="chromium" tests="4" failures="0" skipped="0" time="16.173" errors="0">
-<testcase name="TC-PROD | Products UI with Fixtures › TC-FIX-001 | Products load after login" classname="ui\products.fixture.spec.ts" time="3.394">
+<testsuite name="api\users.spec.ts" timestamp="2026-04-19T09:57:40.159Z" hostname="API" tests="7" failures="0" skipped="0" time="1.61" errors="0">
+<testcase name="TC-USER | Users API › TC-USER-001 | Get all users returns 200 and array" classname="api\users.spec.ts" time="0.249">
 </testcase>
-<testcase name="TC-PROD | Products UI with Fixtures › TC-FIX-002 | Cart starts at zero" classname="ui\products.fixture.spec.ts" time="3.665">
+<testcase name="TC-USER | Users API › TC-USER-002 | Get single user returns correct data" classname="api\users.spec.ts" time="0.243">
 </testcase>
-<testcase name="TC-PROD | Products UI with Fixtures › TC-FIX-003 | Can filter by electronics category" classname="ui\products.fixture.spec.ts" time="5.311">
+<testcase name="TC-USER | Users API › TC-USER-003 | User schema has all required fields" classname="api\users.spec.ts" time="0.228">
 </testcase>
-<testcase name="TC-PROD | Products UI with Fixtures › TC-FIX-004 | Adding items updates cart correctly" classname="ui\products.fixture.spec.ts" time="3.803">
+<testcase name="TC-USER | Users API › TC-USER-004 | User name has firstname and lastname" classname="api\users.spec.ts" time="0.264">
 </testcase>
-</testsuite>
-<testsuite name="ui\products.spec.ts" timestamp="2026-04-19T08:56:38.146Z" hostname="chromium" tests="9" failures="0" skipped="0" time="38.86" errors="0">
-<testcase name="TC-PROD | Products UI › TC-UI-009 | Products grid is visible after login" classname="ui\products.spec.ts" time="4.81">
+<testcase name="TC-USER | Users API › TC-USER-005 | User address has correct structure" classname="api\users.spec.ts" time="0.218">
 </testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-010 | Products page shows multiple products" classname="ui\products.spec.ts" time="4.46">
+<testcase name="TC-USER | Users API › TC-USER-006 | User email is a valid format" classname="api\users.spec.ts" time="0.213">
 </testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-011 | Category filter is visible" classname="ui\products.spec.ts" time="5.343">
-</testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-012 | Filter by electronics shows correct products" classname="ui\products.spec.ts" time="4.462">
-</testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-013 | Filter by jewelery shows correct products" classname="ui\products.spec.ts" time="3.508">
-</testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-014 | Cart count starts at zero" classname="ui\products.spec.ts" time="5.268">
-</testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-015 | Adding product increases cart count" classname="ui\products.spec.ts" time="3.753">
-</testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-016 | Adding multiple products updates cart count" classname="ui\products.spec.ts" time="3.724">
-</testcase>
-<testcase name="TC-PROD | Products UI › TC-UI-017 | Logout from products page works" classname="ui\products.spec.ts" time="3.532">
+<testcase name="TC-USER | Users API › TC-USER-007 | Get invalid user returns empty or error" classname="api\users.spec.ts" time="0.195">
 </testcase>
 </testsuite>
 </testsuites>
