@@ -40,7 +40,7 @@ pipeline {
                 sh 'npm ci'
 
                 echo '=== Installing Playwright browsers ==='
-                sh 'npx playwright install chromium --with-deps'
+                sh 'npx playwright install chromium'
             }
         }
 
