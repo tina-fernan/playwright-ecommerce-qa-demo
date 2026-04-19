@@ -67,8 +67,6 @@ pipeline {
             steps {
                 echo '=== Starting local server and running UI Tests ==='
                 sh '''
-                    npx http-server . -p 3000 &
-                    sleep 3
                     npx playwright test tests/ui/ \
                         --project=chromium \
                         --reporter=list,junit
