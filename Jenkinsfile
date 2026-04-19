@@ -51,7 +51,7 @@ pipeline {
                 sh '''
                     npx playwright test tests/api/ \
                         --project=API \
-                        --reporter=list,junit
+                        --reporter=list,junit,html,allure-playwright
                 '''
             }
             post {
@@ -65,11 +65,11 @@ pipeline {
         // Stage 4: UI Tests 
         stage('UI Tests') {
             steps {
-                echo '=== Starting local server and running UI Tests ==='
+                echo '=== running UI Tests ==='
                 sh '''
                     npx playwright test tests/ui/ \
                         --project=chromium \
-                        --reporter=list,junit
+                        --reporter=list,junit,html,allure-playwright
                 '''
             }
             post {
@@ -84,13 +84,12 @@ pipeline {
         stage('Reports') {
             steps {
                 echo '=== Generating Reports ==='
-                sh 'npx allure generate allure-results -o allure-report --clean'
             }
             post {
                 always {
                     // Playwright HTML Report
                     publishHTML(target: [
-                        allowMissing:          false,
+                        allowMissing:          true,
                         alwaysLinkToLastBuild: true,
                         keepAll:               true,
                         reportDir:             'playwright-report',
