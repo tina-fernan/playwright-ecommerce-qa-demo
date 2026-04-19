@@ -1,0 +1,48 @@
+{
+  "validUser": {
+    "username": "mor_2314",
+    "password": "83r5^_"
+  },
+  "invalidUsers": [
+    { "username": "wronguser", "password": "wrongpass", "label": "invalid credentials" },
+    { "username": "",          "password": "83r5^_",    "label": "empty username" },
+    { "username": "mor_2314",  "password": "",           "label": "empty password" },
+    { "username": "' OR 1=1", "password": "hack",       "label": "SQL injection attempt" },
+    { "username": "<script>",  "password": "xss",        "label": "XSS attempt" }
+  ],
+  "newProduct": {
+    "title": "QA Automation Test Product",
+    "price": 29.99,
+    "description": "Created by automated test suite",
+    "image": "https://fakestoreapi.com/img/test.jpg",
+    "category": "electronics"
+  },
+  "updatedProduct": {
+    "title": "Updated QA Test Product",
+    "price": 49.99,
+    "description": "Updated by automated test suite",
+    "image": "https://fakestoreapi.com/img/test.jpg",
+    "category": "electronics"
+  },
+  "newCart": {
+    "userId": 1,
+    "date": "2024-01-01",
+    "products": [
+      { "productId": 1, "quantity": 2 },
+      { "productId": 3, "quantity": 1 }
+    ]
+  },
+  "categories": [
+    "electronics",
+    "jewelery",
+    "men's clothing",
+    "women's clothing"
+  ],
+  "boundaries": {
+    "validProductId": 1,
+    "invalidProductId": 9999,
+    "productLimit": 5,
+    "maxPrice": 1000,
+    "minPrice": 0
+  }
+}
