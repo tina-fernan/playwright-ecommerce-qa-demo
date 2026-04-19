@@ -23,31 +23,27 @@ covering UI automation, API testing, test reporting and CI/CD pipelines.
 ## Project Structure
 
 playwright-ecommerce-qa-demo/
-├── tests/
-│   ├── ui/                   # UI automation tests
-│   │   ├── login.spec.ts
-│   │   ├── products.spec.ts
-│   │   └── products.fixture.spec.ts
-│   └── api/                  # API tests
-│       ├── auth.spec.ts
-│       ├── products.spec.ts
-│       ├── carts.spec.ts
-│       └── users.spec.ts
-├── pages/                    # Page Object Model
-│   ├── LoginPage.ts
-│   └── ProductsPage.ts
-├── fixtures/
-│   └── testFixtures.ts       # Reusable test setup
-├── data/
-│   └── testData.json         # Centralised test data
-├── utils/
-│   └── helpers.ts            # Utility functions
-├── docs/
-│   ├── TEST_PLAN.md          # Test plan
-│   └── TEST_CASES.md         # Test cases
-├── Jenkinsfile               # Jenkins pipeline
-├── playwright.config.ts      # Playwright configuration
-└── index.html                # Local UI test target
+| Path | Type | Purpose |
+|---|---|---|
+| `tests/ui/login.spec.ts` | Test | UI login test cases |
+| `tests/ui/products.spec.ts` | Test | UI products test cases |
+| `tests/ui/products.fixture.spec.ts` | Test | UI tests using fixtures |
+| `tests/api/auth.spec.ts` | Test | API authentication tests |
+| `tests/api/products.spec.ts` | Test | API products CRUD tests |
+| `tests/api/carts.spec.ts` | Test | API carts CRUD tests |
+| `tests/api/users.spec.ts` | Test | API users tests |
+| `pages/LoginPage.ts` | Page Object | Login page selectors and actions |
+| `pages/ProductsPage.ts` | Page Object | Products page selectors and actions |
+| `fixtures/testFixtures.ts` | Fixture | Reusable authenticated session setup |
+| `data/testData.json` | Data | Centralised test data and edge cases |
+| `utils/helpers.ts` | Utility | Random data, validation, wait helpers |
+| `docs/TEST_PLAN.md` | Doc | Test plan — scope, approach, risks |
+| `docs/TEST_CASES.md` | Doc | All test cases with IDs and priority |
+| `Jenkinsfile` | CI/CD | Jenkins declarative pipeline |
+| `playwright.config.ts` | Config | Browsers, reporters, timeouts |
+| `index.html` | UI | Local e-commerce app for UI testing |
+| `.github/workflows/playwright.yml` | CI/CD | GitHub Actions cloud pipeline |
+| `.env.example` | Config | Environment variables template |
 
 ---
 
