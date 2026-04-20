@@ -1,6 +1,8 @@
 # Playwright E-commerce QA Suite 🎭
 
-![GitHub Actions] https://github.com/tina-fernan/playwright-ecommerce-qa-demo/actions/workflows/playwright.yml/badge.svg
+GitHub Actions: https://github.com/tina-fernan/playwright-ecommerce-qa-demo/actions/workflows/playwright.yml/badge.svg
+
+📊 Live Allure Report: https://tina-fernan.github.io/playwright-ecommerce-qa-demo
 
 A complete end-to-end QA automation framework built with **Playwright** and **TypeScript**, 
 covering UI automation, API testing, test reporting and CI/CD pipelines.

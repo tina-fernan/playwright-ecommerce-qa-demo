@@ -74,11 +74,18 @@ jobs:
           path: allure-report/
           retention-days: 30
 
-      # Deploy Allure report to GitHub Pages
-      - name: Deploy Allure report to GitHub Pages
+       # Deploy Allure report to GitHub Pages 
+      - name: Setup Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v3
+        uses: actions/configure-pages@v4
+
+      - name: Upload Pages artifact
+        if: always()
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./allure-report
-          publish_branch: gh-pages
+          path: ./allure-report
+
+      - name: Deploy to GitHub Pages
+        if: always()
+        id: deployment
+        uses: actions/deploy-pages@v4
