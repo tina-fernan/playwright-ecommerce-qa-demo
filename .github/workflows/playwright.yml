@@ -2,10 +2,16 @@ name: QA Automation Tests
 
 on:
   push:
-    branches: [main, develop]
+    branches: [main]
   pull_request:
     branches: [main]
   workflow_dispatch:
+
+# Allow GitHub Pages deployment
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
   playwright-tests:
@@ -14,26 +20,21 @@ jobs:
     timeout-minutes: 30
 
     steps:
-      # ── 1. Checkout ───────────────────────────────────────────
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # ── 2. Node.js setup ──────────────────────────────────────
       - name: Setup Node.js 24
         uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: 'npm'
 
-      # ── 3. Install dependencies ───────────────────────────────
       - name: Install dependencies
         run: npm ci
 
-      # ── 4. Install Playwright browsers ────────────────────────
       - name: Install Playwright browsers
         run: npx playwright install chromium --with-deps
 
-      # ── 5. Run API tests ──────────────────────────────────────
       - name: Run API tests
         run: npx playwright test tests/api/ --project=API
         env:
@@ -42,7 +43,6 @@ jobs:
           TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
           CI: true
 
-      # ── 6. Run UI tests ───────────────────────────────────────
       - name: Run UI tests
         run: npx playwright test tests/ui/ --project=chromium
         env:
@@ -51,7 +51,13 @@ jobs:
           TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
           CI: true
 
-      # ── 7. Upload Playwright report ───────────────────────────
+      - name: Install Allure CLI
+        run: npm install -g allure-commandline
+
+      - name: Generate Allure report
+        run: allure generate allure-results -o allure-report --clean
+        if: always()
+
       - name: Upload Playwright report
         if: always()
         uses: actions/upload-artifact@v4
@@ -60,11 +66,19 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
-      # ── 8. Upload test results on failure ─────────────────────
-      - name: Upload test failures
-        if: failure()
+      - name: Upload Allure report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-failures
-          path: test-results/
-          retention-days: 7
+          name: allure-report
+          path: allure-report/
+          retention-days: 30
+
+      # Deploy Allure report to GitHub Pages
+      - name: Deploy Allure report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          publish_branch: gh-pages
